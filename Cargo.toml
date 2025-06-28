@@ -1,0 +1,12 @@
+[package]
+name = "glow-opengl"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+glow = "0.16.0"
+tracing-subscriber = {version = "0.3.19", features = ["env-filter"]}
+winit = "0.30.11"
+
+[lints.rust]
+unexpected_cfgs = { level = "warn", check-cfg = ['cfg(android_platform)', 'cfg(web_platform)'] }
